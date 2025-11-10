@@ -11,7 +11,7 @@
   --slate-900: hsl(218, 44%, 22%);
 }
 
-.main-content {
+body {
   font-family: "Outfit", sans-serif;
   background-color: var(--slate-300);
   display: flex;

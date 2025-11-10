@@ -1,0 +1,102 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-slate-300: hsl(212, 45%, 89%);
+  --color-slate-500: hsl(216, 15%, 48%);
+  --color-slate-900: hsl(218, 44%, 22%);
+
+  /* * 1. æâçº¯é»âç RGB å¼ï¼ä¸å¸¦å½æ°ï¼å­ä¸ºåéã
+   * æä»¬å«å® --color-shadowï¼å ä¸ºå®å°±æ¯ç¨æ¥åé´å½±çåºè²ã
+   */
+  --color-shadow: 0, 0, 0;
+
+  /* * 2. æâéæåº¦âä¹å­ä¸ºåéã
+   * æä»¬å¯ä»¥å®ä¹å¥½å ä¸ªâæ¡£ä½â
+   */
+  --shadow-opacity-soft: 0.047; /* ä½ ç¨çè¿ä¸ªï¼éå¸¸æå */
+  --shadow-opacity-medium: 0.1; /* ä¸ä¸ªä¸­ç­çé´å½± */
+  --shadow-opacity-strong: 0.2; /* ä¸ä¸ªæ´å¼ºçé´å½± */
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Outfit", serif;
+}
+
+body {
+  background-color: var(--color-slate-300);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* æ§å¶æ´ä½çæå¤§å®½åº¦ãè¿æ ·å­åç´ widthè®¾ç½®æ 100% å°±å¯ä»¥èä¸éè¦è®¾ç½®åºå®å®½åº¦ */
+  /* åå¨é©±å¨å¸å± (Intrinsic Layout) çææ³ */
+  width: 100%;
+  max-width: 320px;
+
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 40px;
+
+  gap: 24px;
+
+  background-color: var(--color-white);
+  border-radius: 20px;
+
+  -webkit-box-shadow: 0px 25px 25px 0px
+    rgba(var(--color-shadow), var(--shadow-opacity-soft));
+  box-shadow: 0px 25px 25px 0px
+    rgba(var(--color-shadow), var(--shadow-opacity-soft));
+}
+
+.container > * {
+  flex: 1 0 0;
+}
+
+/* .image {
+  width: 288px;
+  height: 288px;
+} */
+
+.qr-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  /* width: 256px; */
+  color: var(--color-slate-900);
+}
+
+.subtitle {
+  /* width: 256px; */
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
+  color: var(--color-slate-500);
+}
