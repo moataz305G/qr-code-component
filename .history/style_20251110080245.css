@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  background-color: hsl(212, 45%, 89%);
+  align-items: center;
+}
+.card {
+  background-color: #ffffff;
+  width: 300px;
+}
+.qr-image {
+}
+.h1 {
+}
